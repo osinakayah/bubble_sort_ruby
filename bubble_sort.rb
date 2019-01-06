@@ -1,4 +1,21 @@
+def is_sorted(ar)
+  length_of_array = ar.length
+  i = 0
+  while i < length_of_array do
+    current_element = ar[i]
+    next_element = ar[i]
+    if i != length_of_array - 1
+      next_element = ar[i + 1]
+    end
 
+
+    if current_element > next_element
+      return false
+    end
+    i += 1
+  end
+  return true
+end
 
 def bubble_sort(arr_to_sort)
   until is_sorted(arr_to_sort) do
